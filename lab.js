@@ -178,7 +178,7 @@ function genderValidation() {
 
 function userExistValidation() {
     let usersArr = JSON.parse(localStorage.getItem("users"))
-    if (usersArr.some(user => user.mail.toUpperCase() === mail.value.toUpperCase())){
+    if (usersArr.some(user => user.mail.toUpperCase() === mail.value.toUpperCase()) || mail.value.length === 0){
         mail.style.borderColor = "red"
         return true
     }
