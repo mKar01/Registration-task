@@ -297,7 +297,9 @@ function resetUserPassword(event) {
             localStorage.setItem("users",JSON.stringify(users))
         }
     })
-
+    resetPassword.value = ""
+    newPassword.value = ""
+    newPasswordConfirm.value = ""
 }
 
 
