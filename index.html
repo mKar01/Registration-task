@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="reg-form-header">
+            <h2 id="header-text">REGISTRATION FORM</h2>
+        </div>
+        <div class="bar">
+            <button class="btn" id="switch-button" onclick="switchForm()">Login</button>
+        </div>
+        <form class="reg-form" onsubmit="registration(event)">
+            <div class="mail-style">
+                <label class="xlarge" for="mail-input">Mail</label>
+                <input class="input-style" id="mail-input" autocomplete="off" type="text">
+            </div>
+            <div class="password-style">
+                <label class="xlarge" for="password-input">Password</label>
+                <input class="input-style" id="password-input" type="password">
+            </div>
+            <div class="password-style">
+                <label class="xlarge" for="password-input-confirm">Confirm password</label>
+                <input class="input-style" id="password-input-confirm" type="password">
+            </div>
+            <div class="first-name-style">
+                <label class="xlarge" for="first-name-input">First name</label>
+                <input class="input-style" id="first-name-input">
+            </div>
+            <div class="last-name-style">
+                <label class="xlarge" for="last-name-input">Last name</label>
+                <input class="input-style" id="last-name-input">
+            </div>
+            <div class="dob-style">
+                <label class="xlarge" for="dob">Date of birthday</label>
+                <input class="input-style" id="dob" type="date">
+            </div>
+            <div class="gender-style">
+                <div>
+                    <label class="gender-label xlarge" for="male">Male</label>
+                    <input class="input-style" id="male" type="radio" name="gender" value="male">
+                </div>
+                <div>
+                    <label class="gender-label xlarge" for="female">Female</label>
+                    <input class="input-style" id="female" type="radio" name="gender" value="female">
+                </div>
+            </div>
+            <span class="submit-btn">
+                <button class="btn">Registration</button>
+            </span>
+        </form>
+        <form class="login-form">
+            <div class="mail-style">
+                <label class="xlarge" for="login-mail-input">Mail</label>
+                <input class="input-style" id="login-mail-input" autocomplete="off" type="text">
+            </div>
+            <div class="password-style">
+                <label class="xlarge" for="login-password-input">Password</label>
+                <input class="input-style" id="login-password-input" type="password">
+            </div>
+            <span class="submit-btn">
+                <button class="btn" onclick="login(event)">Login</button>
+            </span>
+        </form>
+        <div class="profile">
+            <h3 class="profile-email"></h3>
+            <form class="profile-reset-password">
+                <div class="reset-password-block">
+                    <label class="xlarge" for="reset-password">Password</label>
+                    <input class="input-style" id="reset-password" type="">
+                </div>
+                <div class="reset-password-block">
+                    <label class="xlarge" for="new-password">New password</label>
+                    <input class="input-style" id="new-password" type="">
+                </div>
+                <div class="reset-password-block">
+                    <label class="xlarge" for="re-new-password">Re-type new password</label>
+                    <input class="input-style" id="re-new-password" type="">
+                </div>
+                <div class="reset-password-button">
+                    <button class="btn" onclick="resetUserPassword(event)">Reset</button>
+                </div>
+            </form>
+            <button class="btn" onclick="logOut()">Log out</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="lab.js"></script>
+</body>
+</html>
